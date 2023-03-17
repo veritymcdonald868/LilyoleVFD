@@ -8,7 +8,6 @@ from gitutils import (
     get_git_repo_dir,
     GitRepo,
 )
-from trymerge import GitHubPR
 from github_utils import (
     gh_delete_comment,
     gh_post_pr_comment,
@@ -35,8 +34,6 @@ def parse_args() -> Any:
     from argparse import ArgumentParser
     parser = ArgumentParser("Check PR labels")
     parser.add_argument("pr_num", type=int)
-
-    return parser.parse_args()
 
 
 def main() -> None:
